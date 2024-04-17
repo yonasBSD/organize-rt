@@ -72,17 +72,17 @@ OPTIONS:
 Recommended mode: `organize-rt -rH`
 
 
-If you have several file with the same name, program will save them like `file`, `file.COPY<id>`, `file.COPY<id>`..., where `id` isn't a copy number, but a unique number. Also, program will skip all file errors like `Bad permissions` and print about them (if --quiet flag isn't specified). 
+If you have several file with the same name, program will save them like `file`, `file.COPY<id>`, `file.COPY<id>`..., where `id` isn't a copy number, but a unique number. Also, program will skip all file errors like `Bad permissions` and print about them (if --quiet flag isn't specified).
 
 When you run this program, __after all moves__ it will save its actions in log (--log option, default "./organize-rt.log").
-If you want to discard changes, run with --undo option. For example `organize-rt --undo --log ./badrun.log` will discard changes, saved in 
+If you want to discard changes, run with --undo option. For example `organize-rt --undo --log ./badrun.log` will discard changes, saved in
 badrun.log. Some important notes about undo:
 * It use absolute paths, so you can run it from anywhere.
 * Due to absolute paths, you can't undid changes if output dir was moved
 * It will skip errors (deleted files from output dir)
 * You can delete source directory, undo mode will restore it
 
-## Example 
+## Example
 Normal mode:
 ```
 $ organize-rt -s in -o out -rH --dry-run
@@ -123,7 +123,7 @@ rules = [
 ]
 #...
 ]
-``` 
+```
 With this rule, file, that match REGEX rule, but __didn't match previous rules__ will move to OUTPUT_DIR/OUTPUT_SUBDIR,
 where OUTPUT_DIR is --output option.
 
